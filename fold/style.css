@@ -1,0 +1,31 @@
+.wp-block-gutenbricks-fold input[type=checkbox],
+.gutenbricks-fold .gutenbricks-fold-reveal {
+	display: none;
+}
+
+.wp-block-gutenbricks-fold input:checked ~ .gutenbricks-fold-reveal {
+	display: block;
+}
+
+.wp-block-gutenbricks-fold label {
+	position: relative;
+}
+
+.wp-block-gutenbricks-fold label:hover {
+	cursor: pointer;
+}
+
+.wp-block-gutenbricks-fold label::after {
+	content: "\005e";
+	position: absolute;
+	right: -20px;
+	font: normal bold 22px/1 monospace;
+	top: -5px;
+	transform: rotateZ(180deg);
+	transition: transform .2s ease-out;
+}
+
+.gutenbricks-fold input:checked + label::after {
+	transform: rotateZ(0deg);
+	top: 5px;
+}

@@ -1,0 +1,14 @@
+.wp-block-gutenbricks-fold label::after {
+	content: "\005e";
+	position: absolute;
+	right: -20px;
+	font: normal bold 22px/1 monospace;
+	top: -5px;
+	transform: rotateZ(180deg);
+	transition: transform .2s ease-out;
+}
+
+.wp-block-gutenbricks-fold.edit label::after {
+	transform: rotateZ(0deg);
+	top: 5px;
+}
